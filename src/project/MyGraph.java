@@ -747,7 +747,6 @@ public class MyGraph extends JFrame implements ActionListener {
 						// vẽ đường đi từ dot1 tới dot2
 						for (int i = 0; i < way.size() - 1; i++)
 							getEdgeById(way.get(i), way.get(i + 1)).setColor(Color.RED);
-						;
 
 						setLabel(Color.BLUE,duongdi + way.toString() + "    L = " + L[dot2.getId()]);
 						repaint();
