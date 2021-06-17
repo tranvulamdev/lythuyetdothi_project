@@ -56,7 +56,7 @@ public class MyGraph extends JFrame implements ActionListener {
 	JTextArea textMatranW = new JTextArea();
 	JTextArea textPL = new JTextArea();
 
-	// Dot dor Bellman-Ford
+	// Dot dot Bellman-Ford
 	Dot dot1 = new Dot();
 	Dot dot2 = new Dot();
 
@@ -741,7 +741,7 @@ public class MyGraph extends JFrame implements ActionListener {
 
 						// setLabel đường đi từ dot1 -> dot2
 						StringBuilder duongdi = new StringBuilder();
-						duongdi.append("(" + dot1.getId() + ")" + " -> " + "(" + dot2.getId() + "): ");
+						duongdi.append("(" + dot1.getId() + ")" + " -> " + "(" + dot2.getId() + "):  ");
 						way = getArrWay();
 
 						// vẽ đường đi từ dot1 tới dot2
@@ -749,7 +749,7 @@ public class MyGraph extends JFrame implements ActionListener {
 							getEdgeById(way.get(i), way.get(i + 1)).setColor(Color.RED);
 						;
 
-						setLabel(Color.BLUE,duongdi + way.toString());
+						setLabel(Color.BLUE,duongdi + way.toString() + "    L = " + L[dot2.getId()]);
 						repaint();
 					}
 
